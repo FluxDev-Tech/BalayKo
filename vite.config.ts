@@ -12,9 +12,8 @@ export default defineConfig({
     },
   },
   server: {
-    // Preserve the existing HMR behavior.
+    allowedHosts: ['balayko.onrender.com'],
     hmr: process.env.DISABLE_HMR !== 'true',
-    // Disable file watching when requested.
     watch: process.env.DISABLE_HMR === 'true' ? null : {},
   },
 });
