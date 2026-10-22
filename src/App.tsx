@@ -15,6 +15,7 @@ import { ComparePage } from './pages/ComparePage';
 import { StudentDashboard } from './pages/StudentDashboard';
 import { OwnerDashboard } from './pages/OwnerDashboard';
 import { AdminDashboard } from './pages/AdminDashboard';
+import { InstallPwaPrompt } from './components/common/InstallPwaPrompt';
 
 export default function App() {
   // Navigation tab state: 'explore' (default map-first), 'details', 'favorites', 'compare', 'dashboard'
@@ -380,6 +381,8 @@ export default function App() {
         activeSchool={activeSchool}
         onFocusOnMainMap={handleFocusOnMainMap}
       />
+
+      <InstallPwaPrompt />
 
       {/* 5. Report Listing Modal */}
       <ReportModal

@@ -1,0 +1,18 @@
+{
+  "name": "BalayKo",
+  "short_name": "BalayKo",
+  "description": "Verified boarding houses near Capiz campuses with maps, listings, and student-ready tools.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F6F8F7",
+  "theme_color": "#075E59",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
