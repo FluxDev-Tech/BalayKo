@@ -1,0 +1,6 @@
+{
+  "name": "BalayKo - Verified Boarding Houses Near Capiz Campuses",
+  "description": "Ang Imo Sunod nga Balay. Discover verified student boarding houses near CAPSU Pilar and college campuses across Capiz, Philippines with real interactive maps and directions.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

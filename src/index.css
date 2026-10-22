@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --primary: #075e59;
+    --primary-hover: #064c48;
+    --secondary: #087f78;
+    --accent: #f6b52e;
+    --dark: #173747;
+    --bg-canvas: #f6f8f7;
+    --surface: #ffffff;
+    --muted: #64748b;
+  }
+
+  :root.dark {
+    --primary: #0a827b;
+    --primary-hover: #0ca199;
+    --secondary: #129c94;
+    --accent: #f6b52e;
+    --dark: #f8fafc;
+    --bg-canvas: #0b151b;
+    --surface: #14232d;
+    --muted: #94a3b8;
+  }
+
+  html, body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--bg-canvas);
+    color: var(--dark);
+    -webkit-tap-highlight-color: transparent;
+    transition: background-color 0.25s ease, color 0.25s ease;
+    overscroll-behavior-y: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Safe area padding for mobile notches and bottom home indicator */
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom, 16px);
+  }
+}
+
+/* Custom Leaflet Map styling */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  font-family: inherit;
+  z-index: 10;
+}
+
+.leaflet-popup-content-wrapper {
+  padding: 0 !important;
+  border-radius: 1rem !important;
+  overflow: hidden !important;
+  box-shadow: 0 10px 25px -5px rgba(23, 55, 71, 0.15), 0 8px 10px -6px rgba(23, 55, 71, 0.1) !important;
+  border: 1px solid rgba(226, 232, 240, 0.8) !important;
+}
+
+.leaflet-popup-content {
+  margin: 0 !important;
+  line-height: inherit !important;
+}
+
+.leaflet-popup-tip {
+  background: white !important;
+}
+
+/* Custom Marker Pulsing for selected property */
+@keyframes markerPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+.selected-pin-pulse {
+  animation: markerPulse 1.8s infinite ease-in-out;
+}
+
+/* Skeleton shimmer animation */
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.animate-shimmer {
+  animation: shimmer 1.8s infinite ease-in-out;
+}
