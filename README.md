@@ -67,3 +67,17 @@ npm run dev
 ```
 
 Visit `http://localhost:3000` to open the map finder.
+
+## Deploying to Render
+
+This project is a frontend application and currently has no backend API routes. The Express server serves the production Vite build and supports client-side page refreshes.
+
+Create a Render **Web Service** for the `main` branch with these settings:
+
+| Setting | Value |
+| --- | --- |
+| Runtime | Node |
+| Build command | `npm install && npm run build` |
+| Start command | `npm start` |
+
+Render supplies the `PORT` environment variable at runtime. Add environment variables only for features that actually need them; do not expose private keys through `VITE_` variables or commit `.env` files.
